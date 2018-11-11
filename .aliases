@@ -1,0 +1,10 @@
+#################### bash #################### 
+alias ll="ls -al --color=auto"
+
+#################### git ##################### 
+alias gs="git st"
+
+################### docker ################### 
+alias dev-start="docker run -v /home/david/development/config:/home/david/development/config -dit --rm --name dev-env dev-env"
+alias dev="docker run -it dev-env zsh"
+alias dev-rm="docker stop dev-env"
