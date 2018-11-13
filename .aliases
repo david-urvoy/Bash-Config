@@ -1,10 +1,54 @@
-#################### bash #################### 
+#################### bash ####################
 alias ll="ls -al --color=auto"
 
-#################### git ##################### 
+#################### git #####################
 alias gs="git st"
+alias gd="git df"
+alias gds="git ds"
+alias gcm="git cm"
+alias gcmm="git cmm"
+alias gca="git ca"
+alias grc="git rc"
+alias gri="git ri"
+alias gco="git co"
+alias gcb="git cb"
+alias gl="git lg"
+alias gr="git reset"
+alias grh="git reset HEAD"
+alias grhd="git reset --hard"
+alias gcc="git co -- ."
+alias gaa="git aa"
+alias gap="git add --patch"
+alias gpf="git push --force"
+alias gps="git push"
+alias gpl="git pull"
+alias gpd="git pull upstream develop"
 
-################### docker ################### 
+################### docker ###################
 alias dev-start="docker run -v /home/david/development/config:/home/david/development/config -dit --rm --name dev-env dev-env"
 alias dev="docker run -it dev-env zsh"
 alias dev-rm="docker stop dev-env"
+
+alias d="docker"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias drn="docker run -dit --rm"
+alias drm="docker rm"
+alias dsp="docker stop"
+alias dpl="docker pull"
+alias dst="docker start"
+alias dex="docker exec -it"
+alias dim="docker images"
+
+alias dc="docker-compose"
+alias dm="docker-machine"
+
+################### maven ###################
+alias mcl="mvn clean"
+alias min="mvn install"
+alias mpkg="mvn package"
+alias mci="mvn clean install -DskipTests"
+alias mcit="mvn clean install"
+alias mcp="mvn compile"
+alias mts="mvn test"
+alias sonar="mvn sonar:sonar -Dsonar.host.url=http://$(dm ip):9000 -Dsonar.jdbc.url='jdbc:h2:tcp://$(dm ip)/sonar'"

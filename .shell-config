@@ -4,3 +4,6 @@ GIT_CONFIG=$CONFIG_HOME/.gitconfig
 if [ -f $CONFIG_HOME/.aliases ]; then
 	. $CONFIG_HOME/.aliases
 fi
+
+# enable docher-machine completion (script required in /etc/bash_completion.d/docker-machine-prompt.bash)
+#PS1='[\u@\h \W$(__docker_machine_ps1)]\$ '

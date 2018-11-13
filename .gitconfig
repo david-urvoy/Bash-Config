@@ -3,5 +3,56 @@
 	name = David Urvoy
 	email = daviid.urvoy@gmail.com
 [alias]
+	co = checkout
 	st = status
+	#aa = !git add -A | git ign
+	aa = add -A
+	cb = checkout -b
 	cm = commit
+	cmm = commit -m
+	br = branch
+	ri = rebase -i
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	rc = rebase --continue
+	ca = commit --amend
+	rh = reset HEAD
+	rhd = reset --hard
+	cdf = clean -df
+	rv = remote -v
+	pf = push --force
+	ps = push
+	psd = push --delete
+	bvv = branch -vv
+	ra = rebase --abort
+	pl = pull --rebase
+	pld = pull --rebase upstream develop
+	df = diff
+	ds = diff --staged
+	stu = !git stash show -p | git apply -R
+	cl = !git reset --hard | git clean -df
+	cc = checkout -- .
+# Add file in tracking area
+	an = add -N
+	dn = diff --name-only
+	cfg = config --global --edit
+	ft = fetch
+	fop = fetch origin -p
+# Partial - commit Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]?
+# y stage this hunk for the next commit
+# n do not stage this hunk for the next commit
+# q quit; do not stage this hunk or any of the remaining hunks
+# a stage this hunk and all later hunks in the file
+# d do not stage this hunk or any of the later hunks in the file
+# g select a hunk to go to
+# / search for a hunk matching the given regex
+# j leave this hunk undecided, see next undecided hunk
+# J leave this hunk undecided, see next hunk
+# k leave this hunk undecided, see previous undecided hunk
+# K leave this hunk undecided, see previous hunk
+# s split the current hunk into smaller hunks
+# e manually edit the current hunk
+# ? print hunk help
+	adp = add --patch
+	ign = !git ls-files -ci --exclude-standard -z | xargs -0 git rh
+[core]
+	excludesfile = ~/.gitignore_global
