@@ -1,6 +1,3 @@
-CONFIG_HOME=/home/david/development/config
-GIT_CONFIG=$CONFIG_HOME/.gitconfig
-
 if [ -f $CONFIG_HOME/.aliases ]; then
 	. $CONFIG_HOME/.aliases
 fi
