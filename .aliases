@@ -36,14 +36,34 @@ alias dst="docker start"
 alias dex="docker exec -it"
 alias dim="docker images"
 alias drmi="docker rmi"
+alias dpr="docker container prune"
 
 alias dc="docker-compose"
 alias dm="docker-machine"
 
 ## DEV-ENV
-alias dev-start="docker run -dit --rm --name dev-env -v $HOME/.zshrc:$HOME/.zshrc -v $HOME/.bashrc:$HOME/.bashrc -v $HOME/development:$HOME/development -v $HOME/.gitconfig:$HOME/.gitconfig -v $HOME/.oh-my-zsh:$HOME/.oh-my-zsh -v $HOME/.emacs.d:$HOME/.emacs.d -v $HOME/.spacemacs:$HOME/.spacemacs dev-env"
-alias dev="docker exec -it dev-env zsh"
-alias dev-rm="docker stop dev-env"
+dev_start ()
+{
+  docker run -dit --rm --name $2 -v $HOME/.zshrc:$HOME/.zshrc -v $HOME/.bashrc:$HOME/.bashrc -v $HOME/development:$HOME/development -v $HOME/.gitconfig:$HOME/.gitconfig -v $HOME/.oh-my-zsh:$HOME/.oh-my-zsh -v $HOME/.emacs.d:$HOME/.emacs.d -v $HOME/.spacemacs:$HOME/.spacemacs $1
+}
+
+dev ()
+{
+  if [ $1 ]; then
+    docker exec -it $1 zsh
+  else
+    docker exec -it dev-env zsh
+  fi
+}
+
+dev_stop ()
+{
+  if [ $1 ]; then
+    docker stop $1
+  else
+    docker stop dev-env
+  fi
+}
 
 ################### maven ###################
 alias mcl="mvn clean"
