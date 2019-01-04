@@ -4,7 +4,7 @@
 	email = daviid.urvoy@gmail.com
 [alias]
 	co = checkout
-	st = status
+	st = !zsh -ic 'git_status "$@"' -
 	#aa = !git add -A | git ign
 	aa = add -A
 	cb = checkout -b

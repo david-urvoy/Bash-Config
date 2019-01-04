@@ -24,6 +24,13 @@ alias gps="git push"
 alias gpl="git pull"
 alias gpd="git pull upstream develop"
 
+git_status () {
+  if [ $1 ]; then
+     DIR="--git-dir=${1}/.git --work-tree=${1}"
+  fi
+  git $(echo $DIR) status
+}
+
 ################### docker ###################
 alias d="docker"
 alias dps="docker ps"
