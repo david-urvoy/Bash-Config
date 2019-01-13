@@ -1,5 +1,6 @@
 #################### bash ####################
 alias ll="ls -al --color=auto"
+alias ide="emacs -nw"
 
 #################### git #####################
 alias gs="git st"
