@@ -102,5 +102,3 @@ CONFIG_HOME=$HOME/development/config
 if [ -f $CONFIG_HOME/.shell-config ]; then
 	. $CONFIG_HOME/.shell-config
 fi
-
-fpath=($HOME/.zsh/completion $fpath)
