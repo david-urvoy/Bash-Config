@@ -90,3 +90,6 @@ mkcdir ()
   mkdir -p -- "$1" &&
   cd -P -- "$1"
 }
+
+################# tmux #################
+alias tms="tmux source-file ~/.tmux-conf"
