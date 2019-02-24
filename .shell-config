@@ -6,7 +6,9 @@ if [ -f ~/.local-shell-config ]; then
 	. ~/.local-shell-config
 fi
 
-export VISUAL=vim
+alias vim=nvim
+
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # tmux
