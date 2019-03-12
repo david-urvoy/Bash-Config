@@ -1,4 +1,5 @@
 #################### bash ####################
+alias l="ll"
 alias ll="ls -al --color=auto"
 alias ide="emacs -nw"
 
@@ -92,6 +93,14 @@ alias mcit="mvn clean install"
 alias mcp="mvn compile"
 alias mts="mvn test"
 alias sonar="mvn sonar:sonar -Dsonar.host.url=http://$(dm ip):9000 -Dsonar.jdbc.url='jdbc:h2:tcp://$(dm ip)/sonar'"
+
+spring-boot:run() {
+    args=""
+    if [ "$1" ]; then
+      args="-Dspring.profiles.active="$(join_by , "$@")
+    fi
+    mvn spring-boot:run "$args"
+}
 
 ################# functions #################
 mkcdir ()
