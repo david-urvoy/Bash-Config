@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ -f $CONFIG_HOME/.aliases ]; then
 	. $CONFIG_HOME/.aliases
 fi
