@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-git submodules init
+git submodule init
 
 cp -r ./.zshrc ~/
 cp -r ./.zsh ~/
