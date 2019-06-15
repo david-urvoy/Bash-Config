@@ -1,7 +1,6 @@
 #################### bash ####################
 alias l="ll"
 alias ll="ls -al --color=auto"
-alias ide="emacs -nw"
 
 #################### git #####################
 alias gs="git st"
@@ -90,7 +89,7 @@ alias mci="mvn clean install -DskipTests"
 alias mcit="mvn clean install"
 alias mcp="mvn compile"
 alias mts="mvn test"
-alias sonar="mvn sonar:sonar -Dsonar.host.url=http://$(dm ip):9000 -Dsonar.jdbc.url='jdbc:h2:tcp://$(dm ip)/sonar'"
+#alias sonar="mvn sonar:sonar -Dsonar.host.url=http://$(dm ip):9000 -Dsonar.jdbc.url='jdbc:h2:tcp://$(dm ip)/sonar'"
 
 spring-boot:run() {
     args=""

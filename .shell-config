@@ -1,8 +1,7 @@
 #!/bin/bash
 
-if [ -f $CONFIG_HOME/.aliases ]; then
-	. $CONFIG_HOME/.aliases
-fi
+. $CONFIG_HOME/.aliases
+. $CONFIG_HOME/.path
 
 if [ -f ~/.local-shell-config ]; then
 	. ~/.local-shell-config
