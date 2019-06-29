@@ -1,11 +1,13 @@
 #!/bin/zsh
 
+# init global variables
+. ./.path
+
 git submodule update --init --recursive
 
-cp -r ./.zshrc ~/
-cp -r ./.zsh ~/
-
-. ~/.zshrc
-
+# install zsh
+./zsh/install.sh
 # install nvim
 ./nvim/install.sh
+
+zsh
