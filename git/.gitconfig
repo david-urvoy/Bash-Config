@@ -56,3 +56,5 @@
 	ign = !git ls-files -ci --exclude-standard -z | xargs -0 git rh
 [core]
 	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
