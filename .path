@@ -4,5 +4,6 @@ export DEV_HOME=$HOME/development
 export CONFIG_HOME=$DEV_HOME/config
 export CONFIG_ZSH=$CONFIG_HOME/zsh
 export CONFIG_NVIM=$CONFIG_HOME/nvim
+export CONFIG_GIT=$CONFIG_HOME/git
 
 export ZSH=$CONFIG_ZSH/.oh-my-zsh

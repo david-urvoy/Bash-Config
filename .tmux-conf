@@ -34,7 +34,7 @@ unbind %
 bind X confirm-before kill-session
 
 # reload the configuration file for tmux
-bind r source-file ~/.tmux.conf
+# bind r source-file ~/.tmux.conf
 
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on

@@ -1,7 +1,7 @@
 NVIM_DIR=~/.config/nvim
 AUTOLOAD_DIR=~/.local/share/nvim/site
 
-sudo $PKG_MANAGER install nvim -y
+sudo $PKG_MANAGER install neovim -y
 
 # .vimrc
 cp $CONFIG_NVIM/.vimrc ~/

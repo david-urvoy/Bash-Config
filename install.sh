@@ -8,6 +8,8 @@
 
 git submodule update --init --recursive
 
+sudo $PKG_MANAGER update
+
 # install zsh
 ./zsh/install.sh
 

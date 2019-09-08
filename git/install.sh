@@ -1,3 +1,3 @@
 #!/bin/zsh
 
-cp .gitconfig ~/
+cp $CONFIG_GIT/.gitconfig ~/
