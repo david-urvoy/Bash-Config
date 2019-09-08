@@ -1,7 +1,10 @@
 #/bin/zsh
 
-# init global variables
+# init path variables
 . ./.path
+
+# init distribution variables
+. ./.distrib
 
 git submodule update --init --recursive
 

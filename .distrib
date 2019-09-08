@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# distro
+# distro=$(lsb_release -a)
+distro=$(hostnamectl)
+if [[ $distro == *"Ubuntu"* ]] || [[ $distro == *"Debian"* ]]; then
+    export DISTRIBUTION="debian"
+    export PKG_MANAGER="apt-get"
+elif [[ $distro == *"Fedora"* ]]; then
+    export DISTRIBUTION="fedora"
+    export PKG_MANAGER="dnf"
+fi

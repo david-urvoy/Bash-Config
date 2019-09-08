@@ -1,11 +1,6 @@
 #!/bin/bash
 
-distro=$(uname -a)
-if [[ $distro == *"Ubuntu"* ]] || [[ $distro == *"Debian"* ]]; then
-    sudo apt-get install zsh -y
-elif [[ $distro == *"Fedora"* ]]; then
-    sudo dnf install zsh -y
-fi
+sudo $PKG_MANAGER install zsh -y
 
 . $CONFIG_ZSH/powerline-fonts/install.sh
 

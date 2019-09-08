@@ -2,6 +2,7 @@
 
 . $CONFIG_HOME/.aliases
 . $CONFIG_HOME/.path
+. $CONFIG_HOME/.distrib
 
 if [ -f ~/.local-shell-config ]; then
 	. ~/.local-shell-config
