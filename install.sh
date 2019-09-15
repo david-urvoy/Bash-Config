@@ -13,6 +13,9 @@ sudo $PKG_MANAGER update
 # install zsh
 ./zsh/install.sh
 
+# install tmux
+sudo $PKG_MANAGER install -y tmux
+
 # install nvim
 ./nvim/install.sh
 
