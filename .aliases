@@ -52,15 +52,10 @@ alias dm="docker-machine"
 ## DEV-ENV
 dev_start ()
 {
-  DEV_CONTAINER_HOME=/home/david
-  docker run -dit --name $2\
-    -v $HOME/.zshrc:$DEV_CONTAINER_HOME/.zshrc\
-    -v $HOME/.bashrc:$DEV_CONTAINER_HOME/.bashrc\
-    -v $HOME/development:$DEV_CONTAINER_HOME/development\
-    -v $HOME/.gitconfig:$DEV_CONTAINER_HOME/.gitconfig\
-    -v $HOME/.oh-my-zsh:$DEV_CONTAINER_HOME/.oh-my-zsh\
-    -v $HOME/.ssh:$DEV_CONTAINER_HOME/.ssh\
-    "${@:3:99}" $1
+  docker run -dit --name ${2:-dev-env} \
+    -v $HOME:/root \
+    "${@:3:99}" \
+    ${1:-dev-env}
 }
 
 dev ()
