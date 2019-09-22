@@ -8,6 +8,7 @@ if [ -f ~/.local-shell-config ]; then
 	. ~/.local-shell-config
 fi
 
+alias vi=nvim
 alias vim=nvim
 
 export VISUAL=nvim
