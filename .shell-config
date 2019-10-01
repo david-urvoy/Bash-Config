@@ -14,9 +14,6 @@ alias vim=nvim
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-# tmux
-tms
-
 fpath=($HOME/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 

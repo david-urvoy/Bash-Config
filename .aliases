@@ -53,7 +53,8 @@ alias dm="docker-machine"
 dev_start ()
 {
   docker run -dit --name ${2:-dev-env} \
-    -v $HOME:/root \
+    -v $HOME:$HOME \
+    -u $(id -u):$(id -g) \
     "${@:3:99}" \
     ${1:-dev-env}
 }
@@ -102,4 +103,5 @@ mkcdir ()
 }
 
 ################# tmux #################
-alias tms="tmux source-file ~/development/config/.tmux-conf"
+#alias tms="tmux source-file ~/development/config/.tmux-conf"
+alias tms="tmux -f ~/development/config/.tmux-conf"
