@@ -1,7 +1,8 @@
 NVIM_DIR=~/.config/nvim
 AUTOLOAD_DIR=~/.local/share/nvim/site
 
-sudo $PKG_MANAGER install neovim -y
+if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER install neovim -y; fi
+
 
 # .vimrc
 cp $CONFIG_NVIM/.vimrc ~/

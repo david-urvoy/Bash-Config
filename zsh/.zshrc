@@ -2,8 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export global variables
-  export CONFIG_HOME=$HOME/development/config
-  . $CONFIG_HOME/.path
+. $HOME/development/config/.path
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

@@ -1,6 +1,7 @@
 #################### bash ####################
 alias l="ls -l --color=auto"
 alias ll="ls -al --color=auto"
+alias rust-install="curl https://sh.rustup.rs -sSf | sh -s -- -y | export PATH=\"${HOME}/.cargo/bin:${PATH}\""
 
 #################### git #####################
 alias gs="git st"
@@ -53,7 +54,7 @@ alias dm="docker-machine"
 dev_start ()
 {
   docker run -dit --name ${2:-dev-env} \
-    -v $HOME:$HOME \
+    -v $HOME/development/projects:/home/dev-user/development/projects \
     -u $(id -u):$(id -g) \
     "${@:3:99}" \
     ${1:-dev-env}
@@ -85,15 +86,6 @@ alias mci="mvn clean install -DskipTests"
 alias mcit="mvn clean install"
 alias mcp="mvn compile"
 alias mts="mvn test"
-#alias sonar="mvn sonar:sonar -Dsonar.host.url=http://$(dm ip):9000 -Dsonar.jdbc.url='jdbc:h2:tcp://$(dm ip)/sonar'"
-
-spring-boot:run() {
-    args=""
-    if [ "$1" ]; then
-      args="-Dspring.profiles.active="$(join_by , "$@")
-    fi
-    mvn spring-boot:run "$args"
-}
 
 ################# functions #################
 mkcdir ()

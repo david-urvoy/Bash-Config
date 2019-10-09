@@ -1,25 +1,29 @@
 #/bin/zsh
 
+if [[ -z $1 ]]; then
+	dev_home=$HOME/development
+else
+	dev_home=$1
+fi
+
 # init path variables
-. ./.path
+. $dev_home/config/.path $dev_home
 
 # init distribution variables
-. ./.distrib
+. $CONFIG_HOME/.distrib
 
-git submodule update --init --recursive
-
-sudo $PKG_MANAGER update
+if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER update; fi
 
 # install zsh
-./zsh/install.sh
+. $CONFIG_ZSH/install.sh
 
 # install tmux
-sudo $PKG_MANAGER install -y tmux
+if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER install -y tmux; fi
 
 # install nvim
-./nvim/install.sh
+. $CONFIG_NVIM/install.sh
 
 # install git
-./git/install.sh
+. $CONFIG_GIT/install.sh
 
 zsh
