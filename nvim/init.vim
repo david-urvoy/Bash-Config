@@ -12,11 +12,14 @@ Plug 'pangloss/vim-javascript'
 " Typescript
 Plug 'leafgarland/typescript-vim'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
 " Javascript libs
 Plug 'othree/javascript-libraries-syntax.vim'
-
-" Angular
-Plug 'matthewsimo/angular-vim-snippets'
 
 " Jasmine
 Plug 'claco/jasmine.vim'
