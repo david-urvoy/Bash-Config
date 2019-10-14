@@ -12,3 +12,10 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" NERD_TREE
+let mapleader = "-"
+nmap <leader>p :NERDTreeFind<cr>
+
+" map <silent> <C-p> :NERDTreeFind
+" map <silent> <S-p> :NERDTreeToggle<CR>
