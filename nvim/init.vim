@@ -14,6 +14,7 @@ Plug 'leafgarland/typescript-vim'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
