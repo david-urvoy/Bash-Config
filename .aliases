@@ -55,6 +55,7 @@ dev_start ()
 {
   docker run -dit --name ${2:-dev-env} \
     -v $HOME/development/projects:/home/dev-user/development/projects \
+    -v $HOME/.ssh:/home/dev-user/.ssh \
     -u $(id -u):$(id -g) \
     "${@:3:99}" \
     ${1:-dev-env}
