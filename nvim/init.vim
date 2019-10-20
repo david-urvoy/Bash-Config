@@ -22,6 +22,10 @@ nmap <leader>p :NERDTreeFind<cr>
 
 " map <silent> <C-p> :NERDTreeFind
 " map <silent> <S-p> :NERDTreeToggle<CR>
+nnoremap <Up>    :resize +2<CR>
+nnoremap <Down>  :resize -2<CR>
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 
 
 " ---------- Plugins (vim-plug) ----------
@@ -30,6 +34,9 @@ Plug 'tpope/vim-sensible'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" Deoplete
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm i -g tern' }
 
 " Javascript
 Plug 'pangloss/vim-javascript'
