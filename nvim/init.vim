@@ -15,9 +15,11 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+set number
 
 " NERD_TREE
-let mapleader = "-"
+let mapleader = " "
+nmap <leader>P :NERDTreeToggle<cr>
 nmap <leader>p :NERDTreeFind<cr>
 
 " map <silent> <C-p> :NERDTreeFind
@@ -30,16 +32,11 @@ nnoremap <Right> :vertical resize -2<CR>
 
 " ---------- Plugins (vim-plug) ----------
 call plug#begin()
-Plug 'tpope/vim-sensible'
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Javascript
 Plug 'pangloss/vim-javascript'
 " Deoplete
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
@@ -59,6 +56,19 @@ Plug 'claco/jasmine.vim'
 
 " Syntax checking
 Plug 'scrooloose/syntastic'
+
+" Utilities
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'majutsushi/tagbar'
+" Default vim configuration ?
+Plug 'tpope/vim-sensible'
+" Plug 'ervandew/supertab'
+Plug 'wesQ3/vim-windowswap' " <leader>ww copy window | <leader>ww paste window to switch
+Plug 'SirVer/ultisnips' " TODO config (major code completion & refactoring)
+" Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf.vim' " TODO install fzf ?
+
+
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
