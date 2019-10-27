@@ -3,6 +3,13 @@
 " ---------- .vimrc ----------
 set runtimepath^=~/.vim/bundle/nerdtree/plugin/NERD_tree.vim
 
+let mapleader = " "
+set number relativenumber
+
+set matchpairs+=<:>
+set autoindent
+set mouse=a
+
 "-- AUTOCOMPLETION --
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -15,19 +22,24 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
-set number
 
 " NERD_TREE
-let mapleader = " "
 nmap <leader>P :NERDTreeToggle<cr>
 nmap <leader>p :NERDTreeFind<cr>
+let g:NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_focus_on_files=1
 
-" map <silent> <C-p> :NERDTreeFind
-" map <silent> <S-p> :NERDTreeToggle<CR>
 nnoremap <Up>    :resize +2<CR>
 nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
+nnoremap <C-Left>  :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
 
 
 " ---------- Plugins (vim-plug) ----------
@@ -37,6 +49,8 @@ call plug#begin()
 Plug 'pangloss/vim-javascript'
 " Deoplete
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+" linter
+Plug 'w0rp/ale'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
@@ -158,3 +172,25 @@ let g:deoplete#sources#ternjs#filetypes = [
                 \ 'vue',
                 \ '...'
                 \ ]
+
+" ---------- ale ----------
+let g:ale_sign_highlight_linenrs = 1
+let g:ale_linters = {}
+let g:ale_sign_error = ""
+let g:ale_sign_warning = ""
+let g:airline#extensions#ale#enabled = 1
+let g:formatdef_eslint = '"eslint-formatter"'
+let g:formatters_javascript = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'javascript': ['eslint'], 'json': ['jq'], 'html': ['prettier'] }
+let g:ale_set_highlights = 0
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_sign_column_always = 1
+let g:ale_echo_cursor = 1
+
+" vim-devicons
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
