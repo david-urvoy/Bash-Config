@@ -82,7 +82,10 @@ Plug 'SirVer/ultisnips' " TODO config (major code completion & refactoring)
 " Plug 'junegunn/fzf'
 " Plug 'junegunn/fzf.vim' " TODO install fzf ?
 
-
+" Themes
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -95,6 +98,8 @@ let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
+" Theme
+let g:airline_theme='dracula'
 
 " ---------- Deoplete ternjs configuration ----------
 " Set bin if you have many instalations
