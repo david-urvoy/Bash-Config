@@ -91,7 +91,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Coc Extensions
-let g:coc_global_extensions = ['coc-tsserver']
+let g:coc_global_extensions = ['coc-marketplace', 'coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-java', 'coc-rls', 'coc-rust-analyzer', 'coc-yaml', 'coc-python', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-git']
 
 " Theme
 let g:airline_theme='dracula'
