@@ -29,10 +29,10 @@ nmap <leader>p :NERDTreeFind<cr>
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 
-nnoremap <Up>    :resize +2<CR>
-nnoremap <Down>  :resize -2<CR>
-nnoremap <Left>  :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+" nnoremap <Up>    :resize +2<CR>
+" nnoremap <Down>  :resize -2<CR>
+" nnoremap <Left>  :vertical resize +2<CR>
+" nnoremap <Right> :vertical resize -2<CR>
 nnoremap <C-Left>  :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 " Switching windows
@@ -53,6 +53,7 @@ Plug 'pangloss/vim-javascript'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -91,7 +92,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Coc Extensions
-let g:coc_global_extensions = ['coc-marketplace', 'coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-java', 'coc-rls', 'coc-rust-analyzer', 'coc-yaml', 'coc-python', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-git']
+let g:coc_global_extensions = ['coc-marketplace', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-eslint', 'coc-json', 'coc-html', 'coc-css', 'coc-java', 'coc-rls', 'coc-rust-analyzer', 'coc-yaml', 'coc-python', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-git']
 
 " Theme
 let g:airline_theme='dracula'
