@@ -81,6 +81,7 @@ Plug 'wesQ3/vim-windowswap' " <leader>ww copy window | <leader>ww paste window t
 Plug 'SirVer/ultisnips' " TODO config (major code completion & refactoring)
 " Plug 'junegunn/fzf'
 " Plug 'junegunn/fzf.vim' " TODO install fzf ?
+Plug 'rstacruz/vim-closer' " autoclose brackets, parentheses, etc.
 
 " Themes
 Plug 'vim-airline/vim-airline'
