@@ -48,6 +48,8 @@ alias drmi="docker rmi"
 alias dpr="docker container prune"
 
 alias dc="docker-compose"
+alias dcu="dc up -d"
+alias dcd="dc down"
 alias dm="docker-machine"
 
 ## DEV-ENV
