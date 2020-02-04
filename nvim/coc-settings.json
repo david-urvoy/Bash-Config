@@ -1,4 +1,7 @@
 {
-    "coc.preferences.noselect": false,
-    "coc.preferences.formatOnType": true
+    "coc.preferences.formatOnType": true,
+    "java.home": "usr/lib/jvm/java-1.8.0-openjdk",
+    "java.configuration.maven.userSettings": "/home/david/.m2/settings.xml",
+    "java.import.maven.enabled": true,
+    "java.maven.downloadSources": true
 }
