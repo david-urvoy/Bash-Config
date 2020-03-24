@@ -96,7 +96,7 @@ call plug#end()
 let g:coc_global_extensions = ['coc-marketplace', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-eslint', 'coc-json', 'coc-html', 'coc-css', 'coc-java', 'coc-rls', 'coc-rust-analyzer', 'coc-yaml', 'coc-python', 'coc-highlight', 'coc-emmet', 'coc-snippets', 'coc-lists', 'coc-git', 'coc-docker', 'coc-definition']
 
 " Theme
-let g:airline_theme='dracula'
+let g:airline_theme='luna'
 
 " ---------- ale ----------
 let g:ale_sign_highlight_linenrs = 1
