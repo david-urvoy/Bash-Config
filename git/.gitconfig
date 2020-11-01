@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = David Urvoy
-	email = daviid.urvoy@gmail.com
+	email = david.urvoy.pro@gmail.com
 [alias]
 	co = checkout
 	st = !zsh -ic 'git_status "$@"' -
