@@ -55,13 +55,17 @@ alias dm="docker-machine"
 ## DEV-ENV
 dev_start ()
 {
+  docker volume create --driver local --opt type=none --opt device=/home/david/.cargo --opt o=bind cargo
   docker run -dit --name ${2:-dev-env} \
     -v $HOME/development/projects:/home/dev-user/development/projects \
     -v $HOME/.ssh:/home/dev-user/.ssh \
+    -v cargo:/home/dev-user/.cargo \
+    -v $HOME/.vscode-server:/home/dev-user/.vscode-server \
     -u $(id -u):$(id -g) \
     "${@:3:99}" \
-    ${1:-dev-env}
+    ${1:-david-urvoy/dev-env}
 }
+#    -v $HOME/.cargo:/home/dev-user/.cargo \
 
 dev ()
 {
