@@ -65,7 +65,6 @@ dev_start ()
     "${@:3:99}" \
     ${1:-david-urvoy/dev-env}
 }
-#    -v $HOME/.cargo:/home/dev-user/.cargo \
 
 dev ()
 {
