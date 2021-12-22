@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Locate development home
-if [[ -z $1 ]]; then
+#if [[ -z $1 ]]; then
 	dev_home=$HOME/development
-else
-	dev_home=$1
-fi
+#else
+#	dev_home=$1
+#fi
 
 # Define environment type (Linux / Docker container)
 if [ -f /.dockerenv ]; then

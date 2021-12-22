@@ -1,10 +1,10 @@
-#/bin/zsh
+#!/bin/bash
 
-if [[ -z $1 ]]; then
+#if [[ -z $1 ]]; then
 	dev_home=$HOME/development
-else
-	dev_home=$1
-fi
+#else
+#	dev_home=$1
+#fi
 
 # init path variables
 . $dev_home/config/.path $dev_home
