@@ -15,15 +15,14 @@
 if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER update; fi
 
 # install zsh
-. $CONFIG_ZSH/install.sh
+#. $CONFIG_ZSH/install.sh
 
 # install tmux
-if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER install -y tmux; fi
+#if [ $ENV_TYPE != "CONTAINER" ]; then sudo $PKG_MANAGER install -y tmux; fi
 
 # install nvim
-. $CONFIG_NVIM/install.sh
+#. $CONFIG_NVIM/install.sh
 
 # install git
 . $CONFIG_GIT/install.sh
 
-zsh
