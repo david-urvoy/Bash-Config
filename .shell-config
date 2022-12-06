@@ -2,20 +2,7 @@
 
 . $CONFIG_HOME/.aliases
 . $CONFIG_HOME/.path
-. $CONFIG_HOME/.distrib
 
 if [ -f ~/.local-shell-config ]; then
 	. ~/.local-shell-config
 fi
-
-alias vi=nvim
-alias vim=nvim
-
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-
-#fpath=($HOME/.zsh/completion $fpath)
-#autoload -Uz compinit && compinit -i
-
-# enable docher-machine completion (script required in /etc/bash_completion.d/docker-machine-prompt.bash)
-#PS1='[\u@\h \W$(__docker_machine_ps1)]\$ '

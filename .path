@@ -1,24 +1,10 @@
 #!/bin/bash
 
-# Locate development home
-#if [[ -z $1 ]]; then
-	dev_home=$HOME/development
-#else
-#	dev_home=$1
-#fi
-
-# Define environment type (Linux / Docker container)
-if [ -f /.dockerenv ]; then
-	export ENV_TYPE="CONTAINER"
-else
-	export ENV_TYPE="VM"
-fi
-
+dev_home=$HOME/development
 
 export DEV_HOME=$dev_home
 export CONFIG_HOME=$DEV_HOME/config
 export CONFIG_ZSH=$CONFIG_HOME/zsh
-export CONFIG_NVIM=$CONFIG_HOME/nvim
 export CONFIG_GIT=$CONFIG_HOME/git
 
 export ZSH=$HOME/.oh-my-zsh

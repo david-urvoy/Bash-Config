@@ -1,7 +1,0 @@
-{
-    "coc.preferences.formatOnType": true,
-    "java.home": "/home/david/development/softwares/openjdk",
-    "java.configuration.maven.userSettings": "/home/david/.m2/settings.xml",
-    "java.import.maven.enabled": true,
-    "java.maven.downloadSources": true
-}
