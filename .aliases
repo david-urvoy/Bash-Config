@@ -46,10 +46,9 @@ alias dim="docker images"
 alias drmi="docker rmi"
 alias dpr="docker container prune"
 
-alias dc="docker-compose"
+alias dc="docker compose"
 alias dcu="dc up -d"
 alias dcd="dc down"
-alias dm="docker-machine"
 
 ################# functions #################
 mkcdir ()
