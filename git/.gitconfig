@@ -14,7 +14,8 @@
 	ri = rebase -i
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	rc = rebase --continue
-	ca = commit --amend
+	ca = commit --amend --no-edit
+	cae = commit --amend
 	rh = reset HEAD
 	rhd = reset --hard
 	cdf = clean -df
